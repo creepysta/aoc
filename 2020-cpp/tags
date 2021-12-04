@@ -1,0 +1,60 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.7	//
+MOD	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^const int MOD = int(1e9) + 7;$/;"	v
+a	D:\Codes\C++\CP\aoc\2020\day2.cpp	/^vector<tuple<int, int, char, string>> a;$/;"	v
+checkInRange	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^forWhat checkInRange(int num) {$/;"	f
+classRange	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^vector<tuple<int, int, int, int>> classRange;$/;"	v
+classes	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^	vector<int> classes;$/;"	m	struct:forWhat	file:
+cnt	D:\Codes\C++\CP\aoc\2020\day2.cpp	/^int cnt[26];$/;"	v
+debug	D:\Codes\C++\CP\aoc\2020\day16.cpp	10;"	d	file:
+debug	D:\Codes\C++\CP\aoc\2020\day16.cpp	12;"	d	file:
+err	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^void err(istream_iterator<string> it) { cerr << "\\b\\b ]\\n";}$/;"	f
+err	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^void err(istream_iterator<string> it, T a, Args... args) { cerr << *it << ": "  << a << ", "; err(++it, args...); }$/;"	f
+forWhat	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^struct forWhat {$/;"	s	file:
+int	D:\Codes\C++\CP\aoc\2020\day16.cpp	8;"	d	file:
+interval	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^bool interval(int a, int b, int x) {$/;"	f
+isValid	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^	bool isValid;$/;"	m	struct:forWhat	file:
+itfr	D:\Codes\C++\CP\aoc\2020\day16.cpp	16;"	d	file:
+m	D:\Codes\C++\CP\aoc\2020\day3.cpp	/^int n, m;$/;"	v
+main	D:\Codes\C++\CP\aoc\2020\day1.cpp	/^int main() {$/;"	f
+main	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^signed main() {$/;"	f
+main	D:\Codes\C++\CP\aoc\2020\day2.cpp	/^int main() {$/;"	f
+main	D:\Codes\C++\CP\aoc\2020\day3.cpp	/^int main() {$/;"	f
+main	D:\Codes\C++\CP\aoc\2020\day4.cpp	/^int main() {$/;"	f
+myTicket	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^vector<int> myTicket;$/;"	v
+n	D:\Codes\C++\CP\aoc\2020\day1.cpp	/^int n;$/;"	v
+n	D:\Codes\C++\CP\aoc\2020\day2.cpp	/^int n;$/;"	v
+n	D:\Codes\C++\CP\aoc\2020\day3.cpp	/^int n, m;$/;"	v
+n	D:\Codes\C++\CP\aoc\2020\day4.cpp	/^int n;$/;"	v
+names	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^vector<pair<string, int>> names;$/;"	v
+one	D:\Codes\C++\CP\aoc\2020\day1.cpp	/^void one() {$/;"	f
+one	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^void one() {$/;"	f
+one	D:\Codes\C++\CP\aoc\2020\day2.cpp	/^void one() {$/;"	f
+one	D:\Codes\C++\CP\aoc\2020\day3.cpp	/^void one() {$/;"	f
+one	D:\Codes\C++\CP\aoc\2020\day4.cpp	/^void one() {$/;"	f
+operator <<	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^ostream& operator << (ostream& out, const vector<int> &v) {$/;"	f
+ostop	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^tmpt , class V> ostop , const map<T,V> &x) itfr$/;"	v	typeref:class:V
+ostop	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^tmpt , class V> ostop , const pair<T,V> &p) { o << "(";o << p.first << ", " << p.second << ")"; return o;}$/;"	v	typeref:class:V
+ostop	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^tmpt > ostop , const set<T> &x) itfr$/;"	v
+ostop	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^tmpt > ostop , const vector<T> &x) itfr$/;"	v
+ostop	D:\Codes\C++\CP\aoc\2020\day16.cpp	15;"	d	file:
+parse	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^void parse(const string &filename) {$/;"	f
+parse	D:\Codes\C++\CP\aoc\2020\day2.cpp	/^void parse() {$/;"	f
+parse	D:\Codes\C++\CP\aoc\2020\day4.cpp	/^void parse() {$/;"	f
+tickets	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^vector<vector<int>> tickets;$/;"	v
+tmpt	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^tmpt , class V> ostop , const map<T,V> &x) itfr$/;"	v
+tmpt	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^tmpt , class V> ostop , const pair<T,V> &p) { o << "(";o << p.first << ", " << p.second << ")"; return o;}$/;"	v
+tmpt	D:\Codes\C++\CP\aoc\2020\day16.cpp	14;"	d	file:
+tokenise	D:\Codes\C++\CP\aoc\2020\day4.cpp	/^void tokenise() {$/;"	f
+tokens	D:\Codes\C++\CP\aoc\2020\day4.cpp	/^vector<vector<pair<string, string>>> tokens;$/;"	v
+two	D:\Codes\C++\CP\aoc\2020\day1.cpp	/^void two() {$/;"	f
+two	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^void two() {$/;"	f
+two	D:\Codes\C++\CP\aoc\2020\day2.cpp	/^void two() {$/;"	f
+two	D:\Codes\C++\CP\aoc\2020\day4.cpp	/^void two() {$/;"	f
+valid	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^vector<bool> valid;$/;"	v
+whatiswhat	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^vector<int> whatiswhat;$/;"	v
+workout	D:\Codes\C++\CP\aoc\2020\day16.cpp	/^vector<vector<int>> workout;$/;"	v
