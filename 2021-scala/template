@@ -1,0 +1,17 @@
+import scala.io.Source._
+
+object Day {
+  def parse(fileName: String) = {
+    val lines = fromFile(fileName).getLines()
+  }
+  def one() = {
+
+  }
+  def two() = {
+
+  }
+  def main(args : Array[String]) : Unit = {
+
+  }
+}
+
