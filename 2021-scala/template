@@ -3,6 +3,7 @@ import scala.io.Source._
 object Day {
   def parse(fileName: String) = {
     val lines = fromFile(fileName).getLines()
+    lines
   }
   def one() = {
 

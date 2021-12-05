@@ -10,7 +10,7 @@ object DayOne {
     val got = inp.foldLeft((inp(0), 0))((b, a) => if(a > b._1) (a, b._2 + 1) else (a, b._2) )
     got._2
   }
-  implicit def bool2int(b:Boolean) = if (b) 1 else 0
+  implicit def bool2int(b : Boolean) : Int = if (b) 1 else 0
   def calc(ar : List[Int], got : Int, cnt : Int) : Int = {
     ar match {
       case a :: b :: c :: rest if got == 0 => calc(b :: c :: rest, a + b + c, 0)
