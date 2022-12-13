@@ -2,8 +2,9 @@ package main
 
 import "fmt"
 
-func p1() {
+func p1() []map[string]int {
   ans := 0
+  ret := []map[string]int{}
   for _, line := range parseInp("p1.in") {
     var seen = map[string]int{}
     var take = map[string]int{}
@@ -21,7 +22,8 @@ func p1() {
     for key, _ := range take {
       ans += charIntMap[key]
     }
-    fmt.Println(take)
+    ret = append(ret, take)
   }
   fmt.Println(ans)
+  return ret
 }
