@@ -11,7 +11,7 @@ def one():
         return None
 
     ans = 0
-    ls = lines("1.in1")
+    ls = lines("1.in2")
     for line in ls:
         left = get_val(line)
         rline = line[::-1]

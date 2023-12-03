@@ -53,7 +53,7 @@ def two():
 
         return maybe
 
-    games = parser("2.in2")
+    games = parser("2.in1")
     ans = 0
     for _, data in games.items():
         got = possible(data)
