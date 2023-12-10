@@ -7,12 +7,12 @@ def parser(fpath: str):
 
 
 def one():
-    parsed = parser("2.in1")
+    parsed = parser("{day}.in")
     ans = 0
     print("ONE:", ans)
 
 def two():
-    parsed = parser("2.in1")
+    parsed = parser("{day}.in")
     ans = 0
     print("TWO:", ans)
 
