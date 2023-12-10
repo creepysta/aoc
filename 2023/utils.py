@@ -47,13 +47,17 @@ def setup(day: str):
     with open(f"{day}.in1", 'w') as f:
         f.write(res.text)
 
-def submit(day: str, ans: int):
+def submit(day: str, ans: int, level: int):
     token = get_token()
     print(f"Submitting ans for {day}...")
     res = requests.post(
         f"https://adventofcode.com/2023/day/{day}/answer",
         cookies={'session': token},
-        json={"answer": ans},
+        data={"answer": ans, "level": level},
+        headers={
+            "referrer": f"https://adventofcode.com/2023/day/{day}",
+            "content-type": "application/x-www-form-urlencoded",
+        }
     )
     res.raise_for_status()
     print("Answer response: ", res.text)
@@ -65,13 +69,14 @@ def main():
     parser.add_argument('--submit', action='store_true')
     parser.add_argument('--day')
     parser.add_argument('--ans', type=int)
+    parser.add_argument('--level', type=int)
     args = parser.parse_args()
     if args.setup:
         assert args.day and len(args.day) > 0
         setup(args.day)
 
     if args.submit:
-        submit(args.day, args.ans)
+        submit(args.day, args.ans, args.level)
 
     return 0
 
