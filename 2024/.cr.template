@@ -5,7 +5,7 @@ def read(fname : String) : String
 end
 
 def parse(content : String) : Array(String)
-  lines = content.split("\n")
+  lines = content.split("\n").select { |x| x.size > 1}
   lines
 end
 
