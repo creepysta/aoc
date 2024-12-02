@@ -15,7 +15,7 @@ def parse(content : String) : Array(Array(Int32))
 end
 
 def _check_monotone(list : Array(Int32)) : Bool
-  rv = list[..list.size - 2].zip(list[1..]).select { |x| x[0] < x[1] }
+  rv = list[...list.size - 1].zip(list[1..]).select { |x| x[0] < x[1] }
   rv.size == list.size - 1
 end
 
@@ -34,7 +34,7 @@ def check_diff(list : Array(Int32)) : Bool
   if (list.size <= 2)
     puts "check_diff: #{list}"
   end
-  rv = list[..list.size - 2].zip(list[1..])
+  rv = list[...list.size - 1].zip(list[1..])
     .reduce(true) { |acc, x| acc && is_valid(x[0], x[1]) }
 
   rv
@@ -57,7 +57,11 @@ def make_good(arr : Array(Int32)) : Tuple(Bool, Array(Int32))
     return {true, arr}
   end
 
-  valid_idx = (0..arr.size - 1).select { |idx| valid_arr(arr[..idx - 1] + arr[idx + 1..]) }.first?
+  valid_idx = (0...arr.size)
+    .select { |idx| valid_arr(
+      arr[...idx] + arr[idx + 1..]
+    ) }
+    .first?
   if valid_idx == nil
     return {false, arr}
   end
@@ -72,15 +76,7 @@ def part2(input : String) : Int32
     .select { |x| x[0] }
     .map { |x| x[1] }
 
-  invalids = parsed
-    .map { |x| make_good(x) }
-    .select { |x| !x[0] }
-    .map { |x| x[1] }
-  p! invalids, valids
-
-  rv = valids.size
-
-  rv
+  valids.size
 end
 
 def main
