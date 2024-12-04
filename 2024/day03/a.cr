@@ -24,24 +24,23 @@ end
 def parse_str(line : String) : Int32
   mul_pat = /(mul\((\d+,\d+)\)|do\(\)|don't\(\))/
   matches = line.scan(mul_pat)
-  i = 0
-  n = matches.size
-  consider = [] of Array(Int32) # array(tuple(i32, i32))
   dont = false
-  while i < n
-    match = matches[i]
-    if (match[1] == "don't()")
-      dont = true
-    elsif (match[0] == "do()")
-      dont = false
-    end
+  consider = matches
+    .select do |match|
+      captures = match.captures
+      if (captures[0] == "don't()")
+        dont = true
+      elsif (captures[0] == "do()")
+        dont = false
+      end
 
-    captures = match.captures
-    if (!dont && captures[1] != nil)
-      consider.push(captures[1].as(String).split(",").map { |x| x.to_i32 })
+      !dont && captures[1] != nil
     end
-    i += 1
-  end
+    .map do |match|
+      captures = match.captures
+
+      captures[1].as(String).split(",").map { |x| x.to_i32 }
+    end
 
   ans = consider.reduce(0) { |acc, tup| acc + (tup[0] * tup[1]) }
   ans
