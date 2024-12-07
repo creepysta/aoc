@@ -21,7 +21,9 @@ else
     echo "Initializing $dir_name ..."
     mkdir $dir_name
     cp ./.cr.template $dir_name/a.cr
+    cp ./.py.template $dir_name/a.py
     sed -i '' -e "s/{DAY_XX}/$dir_name/g" "$dir_name/a.cr"
+    sed -i '' -e "s/{DAY_XX}/$dir_name/g" "$dir_name/a.py"
 fi
 
 
