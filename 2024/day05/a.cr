@@ -24,6 +24,14 @@ def parse(content : String) : Tuple(Array(Tuple(Int32, Int32)), Array(Array(Int3
   {order, updates}
 end
 
+def is_valid(arr : Array(Int32), options : Array(Int32) | Nil) : Int8
+  ok = options == nil
+  if options != nil
+    ok = !arr.to_set.intersects?(options.as(Array(Int32)).to_set)
+  end
+  (ok ? 1 : 0).to_i8
+end
+
 def part1(input : String) : Int32
   order, updates = parse(input)
 
@@ -35,16 +43,12 @@ def part1(input : String) : Int32
 
   valid = updates.select do |arr|
     valid_poss = arr.map_with_index do |x, i|
-      before = arr[...i].to_set
+      before = arr[...i]
       options = grouped[x]?
-      ok = options == nil
-      if options != nil
-        ok = !before.intersects?(options.as(Array(Int32)).to_set)
-      end
-      ok ? 1 : 0
+      is_valid(before, options)
     end
 
-    c_valid = valid_poss.reduce { |acc, x| acc + x }
+    c_valid = valid_poss.reduce(0) { |acc, x| acc + x }
     c_valid == arr.size
   end
 
@@ -70,13 +74,10 @@ def part2(input : String) : Int32
   invalid = updates
     .select do |arr|
       invalid_poss = arr.map_with_index do |x, i|
-        before = arr[...i].to_set
+        before = arr[...i]
         options = grouped[x]?
-        ok = options == nil
-        if options != nil
-          ok = before.intersects?(options.as(Array(Int32)).to_set)
-        end
-        ok
+        # not valid
+        is_valid(before, options) == 0
       end
 
       invalid_poss.find { |x| x == true } != nil
@@ -85,6 +86,7 @@ def part2(input : String) : Int32
       rv = [] of Int32
       in_deg = {} of Int32 => Int32
       present = arr.to_set
+      # fix the arr
 
       arr.each do |x|
       end
@@ -112,7 +114,7 @@ end
 # ---------------
 # ENTRYPOINT
 # ---------------
-main()
+# main()
 
 # ---------------
 # TESTS

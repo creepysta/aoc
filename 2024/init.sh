@@ -30,7 +30,7 @@ fi
 if [[ -f "$session_token_path" ]]; then
     if [[ ! -f "$inp_file" ]]; then
         session=$(cat $session_token_path)
-        curl -H "cookie: $session;" "https://adventofcode.com/$year/day/$(($day))/input" > "$inp_file"
+        curl -H "cookie: $session;" "https://adventofcode.com/$year/day/$(expr $day + 0)/input" > "$inp_file"
     fi
 else
     cat $session_token_path
